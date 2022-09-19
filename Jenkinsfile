@@ -3,7 +3,8 @@ pipeline {
    agent {
     label 'node01'
    }
-   stage('prepare'){
+   stages{
+      stage('prepare'){
       /* groovylint-disable-next-line LineLength */
       git credentialsId: 'Github-usr-pwd', url: 'https://github.com/Devops-self-training/jenkins_series-helloworld-java-maven'
    }
@@ -32,4 +33,5 @@ pipeline {
 //       junit '**/target/surefire-reports/TEST-*.xml'
 //       archive 'target/*.jar'
 //    }
+   }
 }
