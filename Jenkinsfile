@@ -1,7 +1,7 @@
 
 node {
-   agent{
-      label 'node01'
+   agent {
+    label 'node01'
    }
    stage('prepare'){
       /* groovylint-disable-next-line LineLength */
