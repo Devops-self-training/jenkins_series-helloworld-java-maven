@@ -1,14 +1,7 @@
 node {
    label 'node01'
    
-   stage('Preparation') { // for display purposes
-      // Get some code from a GitHub repository
-      git 'https://github.com/Devops-self-training/helloworld-java-maven'
-      // Get the Maven tool.
-      // ** NOTE: This 'M3' Maven tool must be configured
-      // **       in the global configuration.           
-      mvnHome = tool 'maven'
-   }
+  
    stage('Build') {
       // Run the maven build
       if (isUnix()) {
