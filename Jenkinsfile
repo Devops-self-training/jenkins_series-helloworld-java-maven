@@ -6,13 +6,17 @@ pipeline {
    stages{
       stage('prepare'){
       /* groovylint-disable-next-line LineLength */
-      git credentialsId: 'Github-usr-pwd', url: 'https://github.com/Devops-self-training/jenkins_series-helloworld-java-maven'
+      steps{
+         git credentialsId: 'Github-usr-pwd', url: 'https://github.com/Devops-self-training/jenkins_series-helloworld-java-maven'
+      }
    }
 
-   stage('Build') {
-      // Run the maven build
-      sh "mvn build"
-   }
+      stage('Build') {
+         // Run the maven build
+        steps{
+          sh "mvn build"
+        }
+      }
 //   stage('UT') {
 //       // Run the maven build
 //       if (isUnix()) {
