@@ -7,14 +7,10 @@ node {
       git credentialsId: 'Github-usr-pwd', url: 'https://github.com/Devops-self-training/jenkins_series-helloworld-java-maven'
    }
 
-//    stage('Build') {
-//       // Run the maven build
-//       if (isUnix()) {
-//          sh "mvn -Dmaven.test.failure.ignore clean compile"
-//       } else {
-//          bat( mvn -Dmaven.test.failure.ignore clean compile/)
-//       }
-//    }
+   stage('Build') {
+      // Run the maven build
+      sh "mvn build"
+   }
 //   stage('UT') {
 //       // Run the maven build
 //       if (isUnix()) {
