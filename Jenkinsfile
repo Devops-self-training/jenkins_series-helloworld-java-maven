@@ -13,7 +13,7 @@ pipeline {
 
          mvnHome = tool 'maven'
       }
-   }
+
 
      stage('Build') {
       // Run the maven build
